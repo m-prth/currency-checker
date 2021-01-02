@@ -9,8 +9,7 @@ class SquareButton extends StatelessWidget {
     print("Hello World");
   }
 
-  const SquareButton({Key key, @required this.myIcon, @required this.text})
-      : super(key: key);
+  const SquareButton({required this.myIcon, required this.text});
 
   @override
   Widget build(BuildContext context) {

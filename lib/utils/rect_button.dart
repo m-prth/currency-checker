@@ -7,8 +7,7 @@ class RectButton extends StatelessWidget {
   final IconData icon;
 
   const RectButton(
-      {Key key, @required this.color, @required this.text, @required this.icon})
-      : super(key: key);
+      {required this.color, required this.text, required this.icon});
 
   void myFunc() {
     print("Hello World");
