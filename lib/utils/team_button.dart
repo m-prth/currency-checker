@@ -7,7 +7,7 @@ class TeamButton extends StatelessWidget {
   final IconData icon;
 
   const TeamButton(
-      {required this.text, required this.color, required this.icon});
+      {@required this.text, @required this.color, @required this.icon});
 
   void myFunc() {
     print("Hello");
