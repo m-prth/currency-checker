@@ -9,7 +9,7 @@ class SquareButton extends StatelessWidget {
     print("Hello World");
   }
 
-  const SquareButton({required this.myIcon, required this.text});
+  const SquareButton({@required this.myIcon, @required this.text});
 
   @override
   Widget build(BuildContext context) {
