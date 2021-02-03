@@ -1,8 +1,8 @@
 import 'package:currency_checker/utils/currency_check.dart';
 import 'package:currency_checker/utils/rect_button.dart';
 import 'package:currency_checker/utils/square_button.dart';
-import 'package:currency_checker/utils/team_button.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -10,8 +10,13 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  void myFunc() {
-    print("Hello World");
+
+  _launchURL() async {
+    if( await canLaunch(CurrencyCheck.guidelines_URL)){
+      await launch(CurrencyCheck.guidelines_URL);
+    } else {
+      throw 'Could not launch URL';
+    }
   }
 
   @override
@@ -28,7 +33,6 @@ class _HomeState extends State<Home> {
               SizedBox(
                 height: 100,
               ),
-
               Center(
                 child: Text(
                   CurrencyCheck.app_title,
@@ -67,7 +71,6 @@ class _HomeState extends State<Home> {
                     topRight: Radius.circular(25.0),
                   ),
                 ),
-                height: 500,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -91,6 +94,7 @@ class _HomeState extends State<Home> {
                       color: CurrencyCheck.resetButtonColor,
                       text: CurrencyCheck.reset_button_text,
                       icon: CurrencyCheck.reset_icon,
+                      onPressed: null,
                     ),
                     SizedBox(
                       height: 40,
@@ -99,14 +103,16 @@ class _HomeState extends State<Home> {
                       color: CurrencyCheck.rbiButtonColor,
                       text: CurrencyCheck.rbi_button,
                       icon: CurrencyCheck.right_arrow,
+                      onPressed: _launchURL,
                     ),
                     SizedBox(
                       height: 40,
                     ),
-                    TeamButton(
+                    RectButton(
                       text: CurrencyCheck.team_button,
                       color: CurrencyCheck.teamButtonColor,
                       icon: CurrencyCheck.team_info_icon,
+                      onPressed: () => print('Pressed Team Button'),
                     ),
                   ],
                 ),

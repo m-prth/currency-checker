@@ -14,8 +14,8 @@ class SquareButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 120,
-      width: 120,
+      height: MediaQuery.of(context).size.width * 0.3,
+      width: MediaQuery.of(context).size.width * 0.3,
       child: FlatButton(
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),

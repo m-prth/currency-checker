@@ -11,7 +11,7 @@ class CurrencyCheck {
   static const String camera_button_text = "Camera";
   static const String reset_button_text = "Reset";
   static const String rbi_button = "RBI Guidelines";
-  static const String team_button = "Team";
+  static const String team_button = "About The Team";
 
   //icons
   static const IconData camera_icon = Icons.camera_alt_outlined;
@@ -23,10 +23,8 @@ class CurrencyCheck {
   //textStyles
   static TextStyle headingStyle = GoogleFonts.roboto(
       fontWeight: FontWeight.bold, fontSize: 33, color: Colors.white);
-
   static TextStyle buttonTextStyle = GoogleFonts.roboto(
       fontWeight: FontWeight.w500, fontSize: 18, color: Colors.black);
-
   static TextStyle buttonTextStyle2 = GoogleFonts.roboto(
       fontWeight: FontWeight.w500, fontSize: 20, color: Colors.black);
 
@@ -44,4 +42,8 @@ class CurrencyCheck {
   static const String logoPath = 'assets/logo.png';
   static const String bannerPath = 'assets/banner.jpg';
   static const String bannerPath2 = 'assets/banner2.png';
+
+  //URL
+  static const String guidelines_URL = 'https://paisaboltahai.rbi.org.in/';
 }
+

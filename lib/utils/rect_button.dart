@@ -5,9 +5,13 @@ class RectButton extends StatelessWidget {
   final Color color;
   final String text;
   final IconData icon;
+  final onPressed;
 
   const RectButton(
-      {@required this.color, @required this.text, @required this.icon});
+      {@required this.color,
+      @required this.text,
+      @required this.icon,
+      @required this.onPressed});
 
   void myFunc() {
     print("Hello World");
@@ -17,10 +21,11 @@ class RectButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 50,
-      width: 280,
+      width: MediaQuery.of(context).size.width - 30,
       child: FlatButton(
         color: color,
-        onPressed: myFunc,
+        disabledColor: color,
+        onPressed: onPressed,
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
         child: Row(
