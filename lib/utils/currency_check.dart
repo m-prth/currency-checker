@@ -11,14 +11,14 @@ class CurrencyCheck {
   static const String camera_button_text = "Camera";
   static const String reset_button_text = "Reset";
   static const String rbi_button = "RBI Guidelines";
-  static const String team_button = "About The Team";
+  static const String team_button = "Team";
 
   //icons
   static const IconData camera_icon = Icons.camera_alt_outlined;
   static const IconData gallery_icon = Icons.image_outlined;
   static const IconData reset_icon = Icons.refresh_rounded;
   static const IconData right_arrow = Icons.arrow_right_alt_rounded;
-  static const IconData team_info_icon = Icons.info_outline;
+  static const IconData team_info_icon = Icons.people_alt_outlined;
 
   //textStyles
   static TextStyle headingStyle = GoogleFonts.roboto(

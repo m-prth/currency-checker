@@ -4,12 +4,10 @@ import 'package:flutter/material.dart';
 class SquareButton extends StatelessWidget {
   final IconData myIcon;
   final String text;
+  final onPressed;
 
-  void myFunc() {
-    print("Hello World");
-  }
-
-  const SquareButton({@required this.myIcon, @required this.text});
+  const SquareButton(
+      {@required this.myIcon, @required this.text, @required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +19,7 @@ class SquareButton extends StatelessWidget {
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
         color: CurrencyCheck.sqButtonColor,
         disabledColor: Colors.grey,
-        onPressed: myFunc,
+        onPressed: onPressed,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,

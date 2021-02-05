@@ -1,0 +1,4 @@
+0 Fake 500
+1 Fake 2000
+2 Real 500
+3 Real 2000
