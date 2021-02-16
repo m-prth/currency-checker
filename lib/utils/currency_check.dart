@@ -27,6 +27,8 @@ class CurrencyCheck {
       fontWeight: FontWeight.w500, fontSize: 18, color: Colors.black);
   static TextStyle buttonTextStyle2 = GoogleFonts.roboto(
       fontWeight: FontWeight.w500, fontSize: 20, color: Colors.black);
+  static TextStyle buttonTextStyle3 = GoogleFonts.roboto(
+      fontWeight: FontWeight.w200, fontSize: 15, color: Colors.black);
 
   //colors
   static MaterialColor primarySwatch = Colors.blue;
@@ -47,3 +49,15 @@ class CurrencyCheck {
   static const String guidelines_URL = 'https://paisaboltahai.rbi.org.in/';
 }
 
+class Tools {
+  static Color hexToColor(String code) {
+    return Color(int.parse(code.substring(1, 7), radix: 16) + 0xFF000000);
+  }
+
+  static List<Color> multiColors = [
+    Colors.red,
+    Colors.amber,
+    Colors.green,
+    Colors.blue,
+  ];
+}

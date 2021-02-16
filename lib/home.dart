@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:currency_checker/team_page.dart';
 import 'package:currency_checker/utils/currency_check.dart';
 import 'package:currency_checker/utils/rect_button.dart';
 import 'package:currency_checker/utils/square_button.dart';
@@ -79,6 +80,7 @@ class _HomeState extends State<Home> {
   }
 
   @override
+  // ignore: must_call_super
   void dispose() {
     Tflite.close();
   }
@@ -209,8 +211,8 @@ class _HomeState extends State<Home> {
                       text: CurrencyCheck.team_button,
                       color: CurrencyCheck.teamButtonColor,
                       icon: CurrencyCheck.team_info_icon,
-                      onPressed: () => print('Pressed Team Button'),
-                      //TODO:Add teams page
+                      onPressed: () =>
+                          Navigator.pushNamed(context, TeamPage.routeName),
                     ),
                   ],
                 ),
