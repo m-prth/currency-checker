@@ -1,8 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.currency_checker">
-   <application
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <application
         android:label="currency_checker"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:requestLegacyExternalStorage="true">
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

@@ -50,8 +50,6 @@ class _HomeState extends State<Home> {
   }
 
   classifyImage(File image) async {
-    print("!!!!!!");
-    print(_output);
     var output = await Tflite.runModelOnImage(
         path: image.path,
         numResults: 2,
@@ -62,7 +60,6 @@ class _HomeState extends State<Home> {
       _output = output;
       _loading = false;
     });
-    print(_loading);
   }
 
   pickGalleryImage() async {
